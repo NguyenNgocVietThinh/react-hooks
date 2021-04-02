@@ -8,7 +8,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  // dua vao element co id la root
   document.getElementById('root')
 );
 
