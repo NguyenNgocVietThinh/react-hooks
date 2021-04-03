@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './app.scss';
 import ColorBox from './components/ColorBox';
+import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
 
@@ -19,11 +20,24 @@ function App() {
    fakeTodoList.splice(index,1)
    setTodoList(fakeTodoList)
  }
-  
+
+ function handleTodoFormSubmit(formvValues) {
+   // add new todo to current todo list
+  const newTodo = {
+    id: todoList.length + 1,
+    ...formvValues,
+  }
+
+  const fakeTodoList = [...todoList]
+  fakeTodoList.push(newTodo)
+  setTodoList(fakeTodoList)
+
+ }
 
   return (
     <div className="app"> 
       <ColorBox />
+      <TodoForm onSubmit={handleTodoFormSubmit} />
       <TodoList todos={todoList} handleClick={removeTodo}/>
     </div>
   );
