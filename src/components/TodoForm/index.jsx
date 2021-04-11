@@ -16,6 +16,7 @@ function TodoForm(props) {
     const [value, setValue] = useState('')
 
     function handleSubmit(e) {
+        // ngan chan xu ly mac dinh cua trinh duyet
         // Prevent reloading page
         e.preventDefault();
 

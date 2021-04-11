@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import queryString from 'query-string'
-import './app.scss';
+import './HomePage.scss';
 import ColorBox from './components/ColorBox';
 import Pagination from './components/Pagination';
 import PostList from './components/PostList';
@@ -11,7 +11,7 @@ import Clock from './components/Clock';
 import MagicBox from './components/MagicBox';
 
 
-function App() {
+function HomePage() {
 
 //   const [todoList, setTodoList] = useState([
 //     {id:1, title: 'I love you'},
@@ -136,4 +136,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
